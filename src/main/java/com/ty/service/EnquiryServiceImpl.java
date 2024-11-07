@@ -67,25 +67,21 @@ public class EnquiryServiceImpl implements EnquiryService {
 
 	@Override
 	public ResponseEntity<?> updateClassMode(Integer eid, ClassMode classMode) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ResponseEntity<?> updateFees(Integer eid, Double fees) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ResponseEntity<?> deleteEnquiry(Integer cid, Integer eid) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public ResponseEntity<?> getEnquiry(Integer eid) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
