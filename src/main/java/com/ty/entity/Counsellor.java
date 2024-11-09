@@ -6,6 +6,7 @@ import java.util.List;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ty.enums.Status;
 
 import jakarta.persistence.CascadeType;
@@ -49,5 +50,6 @@ public class Counsellor {
 	private LocalDateTime lastUpdate;
 
 	@OneToMany(mappedBy = "counsellor",cascade = CascadeType.ALL)
+	@JsonIgnore
 	private List<Enquiry> enquiries;
 }

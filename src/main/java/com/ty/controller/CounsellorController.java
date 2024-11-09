@@ -11,12 +11,14 @@ import com.ty.entity.Counsellor;
 import com.ty.enums.Status;
 import com.ty.service.CounsellorService;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/counsellor")
+@CrossOrigin(value = "http://localhost:1234/")
 public class CounsellorController {
 
 	@Autowired
@@ -33,6 +35,7 @@ public class CounsellorController {
 	}
 	
 	@PatchMapping("/status")
+	@Deprecated
 	public ResponseEntity<?> updateStatus(@RequestParam Integer cid,@RequestParam Status status) {
 		return counsellorService.updateStatus(cid, status);
 	}
